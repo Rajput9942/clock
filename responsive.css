@@ -1,12 +1,13 @@
 /* Mobile ke liye */
-@media (max-width: 376px) {
+@media (max-width: 600px) {
      
- .clock {
-    font-size: 28px !important;
-    color: #197878 !important;
-    padding: 18px 5px !important;
-    box-shadow: 0 0 20px #175050 !important;
-    margin-top: 264px !important;
+.clock {
+    font-size: 40px !important;
+    color: #318b8b !important;
+       padding: 15px 17px !important;
+    box-shadow: 0 0 20px #1d9f9f !important;
+    letter-spacing: 5px !important;
+    margin-top: 281px !important;
 }
  
 }
