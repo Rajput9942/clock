@@ -1,0 +1,12 @@
+/* Mobile ke liye */
+@media (max-width: 376px) {
+     
+ .clock {
+    font-size: 28px !important;
+    color: #197878 !important;
+    padding: 18px 5px !important;
+    box-shadow: 0 0 20px #175050 !important;
+    margin-top: 264px !important;
+}
+ 
+}
