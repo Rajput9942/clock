@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>countor app.com</title>
+    <style>
+        @media(max-width:600px) {
+            .countor {
+                margin-left: 6px !important;
+                margin-top: 123px !important;
+            }
+        }
+
+        .header {
+            color: darkgray;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            position: relative;
+            top: 100px;
+            right: 50px;
+        }
+
+        .countor {
+            text-align: center;
+            margin-left: 380px;
+            margin-top: 150px;
+        }
+
+        #h2 {
+            padding: 0 90px;
+            font-size: 30px;
+            color: aliceblue;
+            align-items: center;
+            text-align: center;
+        }
+
+        body {
+            background-image: url('https://media.istockphoto.com/id/170958625/photo/dark-blue-grunge-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=mKCxVKmrFrB9-mf1lvMb_OOAqwMAEWxg7Z_VCnqbq0M=');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bg {
+            width: 400px;
+            height: 180px;
+            padding-top: 20px;
+            background-color: rgba(11, 12, 12, 0.336);
+            box-shadow: 2px 2px 10px rgb(72, 176, 207);
+        }
+
+        button {
+            color: black;
+            background-color: aliceblue;
+            padding: 10px 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="header">Countor Project</h1>
+    <div class="countor bg">
+        <h2 id="h2">0</h2>
+        <button onclick="increase()">increase</button>
+        <button onclick="reset()">reset</button>
+        <button onclick="decrease()">dicrease</button>
+
+    </div>
+
+    <script>
+        let count = 0;
+
+        function update() {
+            document.getElementById('h2').innerText = count;
+        }
+
+        function increase() {
+            count++;
+            update();
+        }
+
+        function decrease() {
+            count--;
+            update();
+        }
+
+        function reset() {
+            count = 0;
+            update();
+        }
+
+    </script>
+</body>
+
+</html>
