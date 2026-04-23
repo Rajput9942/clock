@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random number generate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .main{
+            width: 300px;
+            height: 250px;
+            text-align: center;
+            background-color: aqua;
+            border: 1px solid #dbd2d2;
+            border-radius: 10px;
+        }
+        .main h4{
+            font-size: 25px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-shadow: 1px 4px 4px blue;
+        }
+
+        .main input{
+            width: 250px;
+            height: 30px;
+            background-color: azure;
+            border: none;
+            border-radius: 5px;
+        }
+        .fa-regular{
+            position: relative;
+            right: 50px;
+        }
+
+        .fa-solid{
+            position: relative;
+            right: 45px;
+        }
+    </style>
+</head>
+<body>
+    
+   <div class="main">
+    <h3>Generate Number</h3>
+     <input type="password" id="randomInput" placeholder="Generate Number">
+
+<!-- Copy -->
+<span class="icon-btn" onclick="copyText()">
+    <i class="fa-regular fa-copy"></i>
+</span>
+
+<!-- Eye toggle -->
+<span class="icon-btn" onclick="toggle()" id="eyeIcon">
+    <i class="fa-solid fa-eye" id="eyeOpen"></i>
+</span>
+
+<br><br>
+
+<button class="icon-btn" onclick="generate()">Generate</button>
+
+   </div>
+
+    <script>
+    // Generate random number
+    function generate() {
+        let randomNum = Math.floor(Math.random() * 1000000); // 6 digit
+        document.getElementById("randomInput").value = randomNum;
+    }
+
+    // Copy text
+    function copyText() {
+        let input = document.getElementById("randomInput");
+        input.select();
+        input.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(input.value);
+        alert("Copied: " + input.value);
+    }
+
+    // Show/Hide password
+    function toggle() {
+        let input = document.getElementById("randomInput");
+        let icon = document.getElementById("eyeOpen");
+
+        if (input.type === "password") {
+            input.type = "text";
+            icon.classList.remove("fa-eye-slash");
+            icon.classList.add("fa-eye");
+        } else {
+            input.type = "password";
+            icon.classList.remove("fa-eye");
+            icon.classList.add("fa-eye-slash");
+        }
+    }
+</script>
+
+</body>
+</html>
